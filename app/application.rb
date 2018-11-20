@@ -27,10 +27,8 @@ class Application
   def handle_search(search_term)
     if @@items.include?(search_term)
       return "#{search_term} is one of our items"
-    elsif
-      return "Couldn't find #{search_term}"
     else
-      return "Your cart is empty"
+      return "Couldn't find #{search_term}"
     end
   end
 end
