@@ -16,8 +16,7 @@ class Application
       end
     elsif req.path.match(/search/)
       search_term = req.params["q"]
-      resp.write
-      handle_search(search_term)
+      resp.write handle_search(search_term)
     elsif req.path.match(/cart/) && @@cart.size > 0
       binding.pry
       @@cart.each do |item|
