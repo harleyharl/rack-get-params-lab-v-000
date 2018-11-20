@@ -18,6 +18,12 @@ class Application
       @@cart.each do |item|
         resp.write "#{item}\n"
       end 
+    elsif req.path.match(/cart/)
+      if @@cart.size > 0 
+        @@cart.each do |item|
+          resp.write "#{item}\n"
+      else 
+        "Your cart is empty"
     else
       resp.write "Path Not Found"
     end
