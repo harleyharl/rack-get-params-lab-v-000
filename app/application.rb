@@ -25,7 +25,7 @@ class Application
       return "#{search_term} is one of our items"
     elsif
       return "Couldn't find #{search_term}"
-    elsif @@items.size == 0
+    else
       return "Your cart is empty"
     end
   end
