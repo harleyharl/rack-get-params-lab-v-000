@@ -18,7 +18,7 @@ class Application
       search_term = req.params["q"]
       resp.write handle_search(search_term)
     elsif req.path.match(/cart/) && @@cart.size > 0
-      binding.pry
+      # binding.pry
       @@cart.each do |item|
         resp.write "#{item}\n"
       end
